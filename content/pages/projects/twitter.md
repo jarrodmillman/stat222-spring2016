@@ -1,4 +1,4 @@
-Title: Project1
+Title: Twitter
 
 Data Description
 ================
@@ -57,7 +57,7 @@ topics:
 -   relate tweets about a TV show/movie/book to their viewers/ticket
     sales/sales over time
 
-Timeline {#timeline .unnumbered}
+Timeline
 --------
 
 Your final presentations are due in three weeks. Here is the tentative
@@ -127,7 +127,7 @@ presentation on Wednesday (3/11). After your practice presentation, you
 will receive feedback, which you should incorporate in your final
 presentation on Monday (3/16).
 
-How to make slides {#how-to-make-slides .unnumbered}
+How to make slides
 ------------------
 
 There are many ways to create slides, but make sure that you are able to
@@ -142,7 +142,7 @@ explore:
 
 -   Powerpoint or Keynote
 
-How **NOT** to make slides {#how-not-to-make-slides .unnumbered}
+How **NOT** to make slides
 --------------------------
 
 -   Tufte’s *PowerPoint Is Evil*\
