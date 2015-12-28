@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+%\textwidth=6.5in
+%\textheight=9in
+%\topmargin=-1in
+%\bottommargin=-1in
+%\headheight=0in
+%\headsep=.5in
+%\hoffset  -.85in
+\usepackage[margin=0.7in]{geometry}
+\usepackage{termcal}
+
+\newcommand{\Holiday}[2]{%
+\options{#1}{\noclassday}
+\caltext{#1}{\bf{#2}}
+}
+
+
+\begin{document}
+\center
+\begin{calendar}{1/18/16}{15}
+\setlength{\calboxdepth}{.3in}
+
+% Description of the Week.
+\calday[Monday]{\classday}     % Monday
+\skipday                       % Tuesday  (no class)
+\calday[Wednesday]{\classday}  % Wednesday
+\skipday                       % Thursday  (no class)
+\skipday                       % Friday  (no class)
+\skipday\skipday               % weekend  (no class)
+
+% Holidays
+\Holiday{1/18/16}{Academic Holiday}
+\Holiday{2/15/16}{Academic Holiday}
+\Holiday{3/21/16}{Spring Recess}
+\Holiday{3/23/16}{Spring Recess}
+
+% Due dates
+\caltext{2/8/16}{Twitter Slide Presentation}
+\caltext{2/17/16}{Individual Project Report}
+\caltext{2/22/16}{Twitter Poster}
+\caltext{3/14/16}{Imagenet Project Report}
+
+
+\end{calendar}
+\end{document}

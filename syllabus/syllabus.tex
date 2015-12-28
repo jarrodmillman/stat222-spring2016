@@ -1,0 +1,187 @@
+% Document settings
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{multirow}
+\usepackage{setspace}
+
+%-----------------------------------------------------------------------------
+% Special-purpose color definitions (dark enough to print OK in black and white)
+\usepackage{color}
+
+% A few colors to replace the defaults for certain link types
+\definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+\definecolor{darkorange}{rgb}{.71,0.21,0.01}
+\definecolor{darkgreen}{rgb}{.12,.54,.11}
+
+%-----------------------------------------------------------------------------
+% The hyperref package gives us a pdf with properly built
+% internal navigation ('pdf bookmarks' for the table of contents,
+% internal cross-reference links, web links for URLs, etc.)
+\usepackage{hyperref}
+
+\hypersetup{pdftex,  % needed for pdflatex
+  breaklinks=true,  % so long urls are correctly broken across lines
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=darkorange,
+  citecolor=darkgreen,
+  }
+
+
+\usepackage{url}
+
+\pagestyle{plain}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+% Course information
+\begin{tabular}{ l l }
+  \multirow{3}{*}{\includegraphics[height=1.25in,width=1.25in]{../_fig/ucberkeleyseal_874_540.eps}}
+  & \LARGE Statistics 222 --- Spring 2016 Syllabus\\
+  & \LARGE Masters of Statistics Capstone Project \\\\
+  & \Large CCN: 87789 \\
+  & \Large Class meets MW 9--11A in 340 EVANS \\
+\end{tabular}
+\vspace{10mm}
+
+% Professor information
+\begin{tabular}{ l l }
+  \multirow{6}{*} & \large Instructor: K. Jarrod Millman \\
+  & \large \url{http://www.jarrodmillman.com} \\
+  & \large Office Location: 210Q Barker Hall \\
+  & \large Office Hours: TBA \\
+\end{tabular}
+\hspace{20mm}
+% GSI information
+\begin{tabular}{ l l }
+  \multirow{6}{*} & \large GSI: Johnny Hong \\
+  & \large \url{http://} \\
+  & \large Office Location: TBA \\
+  & \large Office Hours: TBA \\
+\end{tabular}
+\vspace{5mm}
+\begin{center} I reserve the right to make changes to the syllabus.\\
+\end{center}
+
+% Course details
+\textbf {\large \\ Course Description:}
+In this course you will develop a portfolio of data analysis projects,
+culminating in a collaborative group project in which you'll work with an
+academic or industry partner. The course is somewhat unique in that it's
+organized around data sets and not around a prespecified set of lecture topics.
+However, along the way, we'll cover a variety of methods used in modern applied
+statistics, we'll explore computational tools for working with non-standard
+data formats and doing reproducible research, and we'll practice the
+communication skills you'll need to be a successful practicing statistician.
+
+\textbf {\large \\ Course Structure:}
+In the first part of the course, everyone will be working on the same data
+analysis projects, some individually and some in groups. For each of the group
+projects, you'll be assigned a team of 3-4 students.  In the second part of
+the course, you'll again be working in a team, and you'll also have an industry
+partner who is providing the data set. For this project, each team will turn in
+one final report.
+
+\textbf {\large \\ Prerequisites:}
+Statistics 201A-201B, 243. Restricted to students who have been admitted to
+the one-year Masters Program in Statistics beginning fall 2012 or later.
+
+\textbf {\large \\ Credit Hours:} 4
+
+\textbf {\large \\ Text(s):} 
+There is no required textbook for this course.  I will be pointing you to a lot
+of different resources as we go, and you will also be collecting them yourself
+and sharing them with the class.
+
+However, I strongly recommend:
+
+\vspace{2mm}
+
+Friedman, J., Hastie, T., \& Tibshirani, R. (2001). \emph{The Elements of Statistical Learning}
+(Vol. 1). Springer, Berlin: Springer Series in Statistics.
+
+\vspace{2mm}
+
+You can find online via \href{http://link.springer.com/book/10.1007\%2F978-0-387-21606-5}{SpringerLink}. \\
+
+\textbf {\large \\ Grading:}
+\hspace*{40mm}
+\begin{tabular}{ l l }
+Participation  & 5\% \\
+Quizzes  & 5\% \\
+Readings & 5\% \\
+Individual report  & 10\% \\
+Small projects & 20\% \\
+Final project  & 55\%
+\end{tabular} \\\\
+
+Quizzes will be held during class.  I will drop your lowest score.
+
+For each assigned reading, you will submit a 2 paragraph report by 21:00 on the
+Thursday it is due.  Unless otherwise specified, the first paragraph should
+summarize the reading.  The second paragraph should briefly explore something
+that interested you (e.g., you may wish to focus on one aspect of the paper in
+more depth, you may wish to discuss something in the reading that you disagree
+with).
+
+There will be 2 small projects and 1 individual project. You will be provided a
+rubric at the start of each project.  You may discuss the individual projects
+with your classmates, but you will be required to work on it independently.
+
+Your final project report will be graded on a 0-100 scale. I'll give you a
+rubric ahead of time.
+
+%\newpage
+
+\textbf{\large \\ Course Policies:} \\
+
+\textbf{Attendance and behavior in class}: You are expected to attend all lectures
+and labs.  Any known or potential extracurricular conflicts should be discussed
+in person with me during the first two weeks of the semester, or as
+soon as they arise. \textbf{Cellphones} are to be turned off during class time.
+\textbf{Laptop} use during class will often be required, but should be
+used for course work only (i.e., not for surfing the web).\\
+
+\textbf{Submission of assignments}: Assignments will be accepted by electronic
+submission to GitHub only.  There will be no makeup quizzes. No
+late reading reports or homeworks will be accepted. \\ % Grades of Incomplete will be granted
+%only for dire medical or personal emergencies that cause you to miss the final project
+%presentation, and only if your work up to that point has been satisfactory.\\
+
+\textbf{Academic integrity}:
+Any work submitted by you and that bears your name is presumed to be your own
+original work that has not previously been submitted for credit in another
+course. While you are permitted to discuss the assignment for the individual project,
+both the code and writeup must be your own.  In particular, discussing your
+code with another student is acceptable, whereas simply giving him or her your
+own code is not.  This is different from the group projects, in which what you
+turn in will be jointly produced by the entire team, and sharing of code is
+encouraged. If you are not clear about the expectations for completing any
+particular assignment, be sure to seek clarification from the instructor.  Any
+evidence of cheating or plagiarism will be subject to disciplinary action.
+Please read the Honor Code (\url{http://asuc.org/honorcode/index.php})
+carefully.\\
+
+
+\textbf{Students with disabilities}: If you need accommodations, please make
+arrangements in a timely manner through DSP.\\
+
+%\noindent\textbf{Important Dates}:
+%\begin{center} \begin{minipage}{5in}
+%\begin{flushleft}
+%Form teams \dotfill Sept. 22\\
+%Homework 1 \dotfill Sept. 24\\
+%Project proposal \dotfill Oct. 1\\
+%Homework 2 \dotfill Oct. 26\\
+%Progress presentation \dotfill Nov. 12\\
+%Draft report \dotfill Nov. 12\\
+%BIC tour \dotfill Nov. 23\\
+%Project presentation \dotfill Dec. 1 \& 3\\
+%Final report \dotfill Dec. 14\\
+%\end{flushleft}
+%\end{minipage}
+%\end{center}
+
+\end{document}
