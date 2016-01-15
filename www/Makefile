@@ -84,6 +84,11 @@ stopserver:
 
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	cp -a ../projects  $(OUTPUTDIR)
+	cd ../syllabus && $(MAKE)
+	cp ../syllabus/syllabus.pdf $(OUTPUTDIR)
+	cd ../syllabus && pdflatex cal.tex
+	cp ../syllabus/cal.pdf $(OUTPUTDIR)
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)

@@ -26,16 +26,17 @@ MD_EXTENSIONS = (['toc'])
 ## Title menu options (this isn't necessary, but I wanted to have more control)
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
-MENUITEMS = []#('Announcements',
+MENUITEMS = [#('Announcements',
              # 'http://www.jarrodmillman.com/stat159-fall2015/announcements.html'),
-             #('Syllabus',
-             # 'http://www.jarrodmillman.com/stat159-fall2015/syllabus.pdf'),
-             #('Calendar',
-             # 'http://www.jarrodmillman.com/stat159-fall2015/cal.pdf'),
+             ('Syllabus',
+              'http://www.jarrodmillman.com/stat222-spring2016/syllabus.pdf'),
+             ('Calendar',
+              'http://www.jarrodmillman.com/stat222-spring2016/cal.pdf'),
              #('Lectures/Labs',
              # 'http://www.jarrodmillman.com/rcsds'),
-             #('Project',
-             # 'http://www.jarrodmillman.com/stat222-spring2016/pages/projects.html'),]
+             ('Projects',
+              'http://www.jarrodmillman.com/stat222-spring2016/pages/projects.html'),
+            ]
 
 DISPLAY_TAGS_ON_SIDEBAR = False
 
