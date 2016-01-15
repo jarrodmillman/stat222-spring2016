@@ -1,0 +1,119 @@
+1 - Jarrod and I decided to take a look at tweets from U.S. Senators. Tweets
+represent one of the most direct ways senators can communicate with the public.
+Every senator has a twitter account, although we’ll see that some of them are
+much more active than others. 
+
+2 - In addition to obtaining timelines and followers for each senator from the
+Twitter API, we obtained data from the sunlight congress api. In particular,
+this told us the party affiliation of each senator, whether democrat,
+republican, or independent. We had some difficulty merging the two data
+sources, since the twitter data on the sunlight api was out of date.
+
+3 - The questions we want to answer with this data break down into four
+categories. First, we look at how often senators tweet and whether this
+correlates with popularity. Then we look at the network of senators and the
+degree to which they follow each other. Finally, we look at particular
+hashtags, as well as words and phrases, and how they differ by party.
+
+4 - This graph shows tweet frequency on the x-axis and number of followers on
+the y-axis, both on the log scale. Throughout the talk, democrats will be shown
+in blue, republicans in red, and independents in purple. We see here that there
+doesn’t seem to be a relationship between how often someone tweets and how many
+followers they have.
+
+5 - Cory Booker, a Democrat and the junior senator from New Jersey, is the king
+of senate tweeters, with nearly 50 tweets a day and over a million followers.
+John McCain, republican from Arizona and former presidential candidate, is also
+hugely popular, although he doesn’t tweet much. Al Franken’s official senate
+twitter account has only 500 followers. He does have another popular campaign
+account.
+
+6 - We were curious to see if senators followed each other. The colored
+elements in each row of this matrix indicate the followers for a particular
+senator. In contrast, the columns indicate who a particular senator follows. In
+each case, we order the senators by party and by number of followers. Because
+you can follow someone on twitter without them following you back, this matrix
+isn’t symmetric.
+
+7 - These diagonal portions of the matrix indicate republicans following
+republicans and democrats following democrats. As expected, both of these are
+higher than the following rates across parties. Democrats in general seem to
+have lower following rates than republicans do. We should probably take these
+results with a grain of salt, since many of these accounts are maintained by
+staffers.
+
+8 - We can also visualize the relationships in a graph. In this plot, the size
+of each point is proportional to the LOG of a person’s total followers. Again
+McCain and Booker stand out. I won’t go into the details of how this plot is
+generated, except to say that although it includes a random element, in all
+versions we get a clear separation between the two main parties.
+
+9 - Now we move to hashtags. Since a new senate class began in January, we’ll
+only go back that far. We see here the most frequently occurring hashtags
+during that time. SOTU (state of the union) was popular in both parties, and we
+also see things like net neutrality, a popular hashtag with democrats, and
+obamacare, mentioned much more frequently by republicans.
+
+10 - Since tweets have a date and time associated with them, we can also track
+the usage of a given hashtag. Here we see how tweets about the Keystone XL
+pipeline relate to three key votes, as the bill moved from house to senate and
+back to the house, and then was vetoed by Obama on February 24.
+
+11 - Now I’ll say a bit about the text processing we did on each tweet. On our
+first pass through the data, we removed entities like handles and hashtags, we
+tokenized, and we removed stop words. We soon realized that a lot of our
+results contained place names: names of states and names of senators. So we
+added two processing steps: at the beginning we search for names of places. We
+need to do this before tokenization since some place names have two words, like
+“North Dakota.” We also removed the first and last names of individual
+senators.
+
+12 - Our cleaning is still not totally perfect. As I’ll discuss at the end of
+the talk, the handling of place names is still problematic. Also, the name
+matching doesn’t include nicknames, so David would get removed but Dave does
+not.
+
+13 - This table shows individual words that are used at least five times as
+often by republicans as by democrats. Obama shows up 3 times, with obamacare,
+obama’s, and lotus. The number of senators responsible for the tweets is in
+parentheses. For example, UNI stands for university of northern Iowa, and the
+senators from that state tweet about the sports teams there very often.
+
+14 - Here is a similar table for words used more frequently by democrats. We
+see more issues emerging here, although it also seems likely that some of these
+words are used frequently together, like equal wage or wage gap. I’ll come back
+to this issue.
+
+15 - For any word, we can look at the concordance to see how it’s being used.
+Here are some examples of obamacare as described by republicans. We see
+negative words like horror, hurting, and struggling.
+
+16 - As expected, the words for democrats are more positive: happy, benefit,
+and helping. Although we didn’t do this, it would be interesting to use
+sentiment analysis on tweets associated with different hashtags or phrases.
+Although in some cases, like Obamacare, we could probably predict the results,
+it would also be interesting to see whether emotions change at all over time,
+or whether one party tends to be more negative than another overall.
+
+17 - We also did a similar analysis for two word phrases, which are called
+bigrams. What’s interesting here to me is that the phrases that are used more
+frequently by democrats are all about specific issues. Republicans mention one
+issue, tax reform, but they also point readers to specific resources much more
+often than democrats do, using phrases like “listen live”, “listen here”, or
+“details here”.
+
+18 - We also used latent semantic indexing to visualize the word usage of the
+two parties in a lower-dimensional space. Treating each senator’s complete
+collection of tweets as a document, it’s easy to distinguish between democrats
+and republicans based on only two sets of word weights, or “topics.” However,
+these results should be viewed as preliminary for a reason I’ll discuss now.
+
+19 - We noticed that the word “ans” showed up in both of the first two topics
+from LSI. Looking at the concordance, we see that this word shows up in places
+that seem to imply people, such as “young ans” and many “ans” We realized that
+this is an artifact of taking out our place names. For example, “Hawaiians”
+becomes “ans” when you remove “Hawaii.” So we haven’t fully gotten rid of the
+place names. 
+
+20 - These names for groups of people from a specific place are called
+demonyms. Our next step in the processing is to take these out too.

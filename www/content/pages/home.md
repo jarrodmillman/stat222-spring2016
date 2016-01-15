@@ -17,7 +17,7 @@ communication skills you'll need to be a successful practicing statistician.
     * [Jarrod Millman](http://www.jarrodmillman.com)
     * OH: TBA in 210Q BARKER
 * GSI
-    * Johnny Hong
-    * OH: TBA
-* Session Dates: 08/27-12/11/16
+    * [Chun Yu Hong (Johnny)](http://jcyhong.github.io)
+    * OH: TBA in 393 EVANS
+* Session Dates: 01/19-5/13/16
     * Class meets MW 900-11A in 340 EVANS

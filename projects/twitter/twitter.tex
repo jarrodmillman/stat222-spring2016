@@ -1,0 +1,261 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+
+%-----------------------------------------------------------------------------
+% Special-purpose color definitions (dark enough to print OK in black and white)
+\usepackage{color}
+% A few colors to replace the defaults for certain link types
+\definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+\definecolor{darkorange}{rgb}{.71,0.21,0.01}
+\definecolor{darkgreen}{rgb}{.12,.54,.11}
+%-----------------------------------------------------------------------------
+% The hyperref package gives us a pdf with properly built
+% internal navigation ('pdf bookmarks' for the table of contents,
+% internal cross-reference links, web links for URLs, etc.)
+\usepackage{hyperref}
+\hypersetup{pdftex, % needed for pdflatex
+  breaklinks=true, % so long urls are correctly broken across lines
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=darkorange,
+  citecolor=darkgreen,
+}
+
+\usepackage{booktabs}
+
+
+\title{Stat 222: Twitter Project}
+\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Data Description}
+
+For this project, your primary data source will be Twitter.  And you will be
+expected to work with the Twitter API using Python to access this data. On
+Monday (2/23), I will briefly review Python, introduce JSON (Javascript Object
+Notation), and demonstrate how to interact with the Twitter API using the
+\href{https://github.com/sixohsix/twitter}{Python Twitter Tools}.  However, you
+will need to do outside reading to get up to speed with these tools. 
+
+Python Twitter Tools is one of several Python
+packages\footnote{\url{http://www.danielforsyth.me/analyzing-a-nhl-playoff-game-with-twitter}}
+for interacting with the Twitter API.  It is fairly minimal and is the package
+used in chapter 1 and 9 of \emph{Mining the Social
+Web}.\footnote{\url{https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition}}
+\begin{itemize}
+\item \href{https://rawgit.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/master/ipynb/html/Chapter%201%20-%20Mining%20Twitter.html}{Chapter 1: Mining Twitter: Exploring Trending Topics, Discovering What People Are Talking About, and More}
+\item \href{https://rawgit.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/master/ipynb/html/Chapter%209%20-%20Twitter%20Cookbook.html}{Chapter 9: Twitter Cookbook}
+\item \href{http://nbviewer.ipython.org/github/ptwobrussell/Mining-the-Social-Web-2nd-Edition/tree/master/ipynb/}{Mining the Social Web notebooks}
+\end{itemize}
+
+
+\section{Your Assignment}
+
+Each group is responsible for creating a poster presentation that visually
+answers a set of questions, which you will determine for yourselves.  You will
+first need to decide on a set of question that you can use Twitter data to
+answer.  Once you determine the questions you wish to address, you will need to
+use the Python Twitter package to download the data from Twitter that you will
+use to answer the question.  You are free to use Python to analyze the data and
+create plots.  Since you've had limited practice with Python, you are welcome
+to use R for some of the analysis and for creating your figures. However, even
+if you decide to use R for some of the analysis and plotting, you must use
+Python to retrieve the data as well as most of the preprocessing.  For example,
+you may decide to use Python to create a term-document matrix (or a term
+frequency by inverse document frequency matrix) and save the data as a CSV
+file, which you can then read with R.
+
+In terms of number of plots in your poster, a {\em minimum} number to aim for
+is 10, although it might be natural for some plots to be grouped together into
+a single figure. Last year, Cari Kauffman and I created a slide presentation as
+an example of the kind of questions and visual answers you might use.  You
+should look over our example, although you should not simply replicate our
+plots.  You can find our slides \href{here}{http://jarrodmillman.com} and
+a transcript of our talk \href{here}{http://jarrodmillman.com}.
+
+{\em Which} questions you answer is up to you, but think about telling a story.
+The story will be more interesting if the questions you address are related to
+each other in some way.  Here are a few example topics:
+
+\begin{itemize}
+\item investigate the relation of breaking news on Twitter versus traditional
+      news sources
+\item compare stop words usage on Twitter versus NY Times
+\item chart how the ratio of positive versus negative words used in tweets
+      involving some event (or issue) change over time
+\item relate tweets about a TV show/movie/book to their viewers/ticket
+      sales/sales over time
+\item examine tweets containing a specific hashtag
+\item compare tweets relating to competing atheletic teams
+\item look at tweets from academics perhaps relating to a conference
+      or journal article
+\end{itemize}
+
+Here are a few things to keep in mind as you think about what questions you
+want to ask and how you might address them.
+
+\begin{itemize}
+
+\item You will be limited in the amount of historical data you can retrieve, so
+questions about how things evolve over time may difficult to investigate.  I
+will show you how to use cron jobs running on a server to run your queries
+automatically on a regular schedule.  This will allow you to somewhat overcome
+the data limitations imposed by Twitter policy.  For example, if Twitter only
+provides responses for the last two weeks, then using a cron job you can
+automatically retrieve two weeks of data every week (or two).
+
+\item Since tweets are short texts, text mining is a natural approach to take.
+However, it isn't the only one.  For instance, you might create a graph where
+the nodes are twitter accounts and the edges represent which accounts follow
+which accounts. Using this graph you could try to identify hubs, authorities,
+and communities.
+
+\item While the focus of your project will involve Twitter data, you should
+consider incorporating external data sources.  For example, you may want to
+relate your findings to current events (e.g., a spike in activity may be
+associated with major news events occuring just before the spike).  Or,
+perhaps, you will want to get additional data about certain Twitter users
+(e.g., pulling biographical details about a Twitter user from Wikipedia or
+their homepage) or organization (e.g., pulling 
+
+\end{itemize}
+
+\subsection*{Timeline and logistics}
+
+Here is the tentative schedule:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\multicolumn{1}{c|}{Monday} & \multicolumn{1}{c}{Wednesday} \\
+\hline
+(1/18) No class              & (1/20) Start Twitter project \\
+(1/25) Text mining I         & (1/27) Text mining II \\
+(2/1) Graphics I             & (2/3) Graphics II \\
+(2/8) Slide presentations    & (2/10) Group work \\
+(3/15) No class              & (3/17) Group work \\                                       
+(3/22) Poster presentations  & (3/24) Start group project 2 \\                                       
+\bottomrule
+\end{tabular}
+\end{table}
+
+Over winter break you should spend some time exploring Twitter
+(\url{http://www.twitter.com}) to familiarize yourself with how it works.
+Explore the Twitter interface to discover who uses it and how. You may wish to
+beginning following a few accounts.  Pay attention to how people use
+\texttt{\#hashtags} and \texttt{\ \@mentions}.  In addition to individuals, look at
+what organizations (e.g., companies, non-profits, political campaigns) use it
+and how.  While doing this, you should also begin thinking about what kind of
+questions you may want to address.
+
+I recommend that you not focus on what methods you would use at this point.
+Once the semester begins, I will discuss how to collect Twitter data as well as
+several different analysis approaches you might take.
+
+I will randomly assign groups during the first day of class. Prior to the
+following Monday, your team should meet to discuss what general questions you
+want to ask.  Once you have a general idea of what questions you want to ask,
+you need to decide what data you want to collect.  You should immediately start
+collecting Twitter data with the goal of addressing your questions.  (You will
+not be permitted to use data that you collect prior to the start of the
+semester.)  In addition to the Twitter data, your group should also discuss
+what other data sources you may need to use.
+
+Next, working individually over the weekend, brainstorm {\em three} specific
+questions to use a starting point for exploring this data. The answers to these
+questions will almost certainly suggest other questions to you, but use these
+as a starting point.  For each question,
+\begin{itemize}
+\item Think about what plot you could make to help answer the question.
+\item Describe exactly what data or data summaries you need to make the plot.
+\item Make an initial version of the plot. (You may want to refine it later.)
+\item Interpret the plot. Does it suggest any other questions/plots to consider?
+\end{itemize}
+These steps may sound obvious, but I know from experience that the temptation
+is there to jump in and start writing code before you've given much thought to
+what you want to learn. I think you'll find you get richer and more interesting
+results in an open-ended project like this if you allocate more of your time at
+this stage to {\em thinking} and less to implementation.
+
+During the second week of the semester, I will discuss text mining in Python.
+This will include basic summary statistics (e.g., word frequency, concordance,
+collocation), the bag-of-words model, document similarity metrics, latent
+semantic indexing, sentiment analysis, and topic modeling.  
+
+using the Natural
+Language Toolkit (nltk).\footnote{http://www.nltk.org} By this point, your
+group should have downloaded the Twitter data and whatever other data you
+think you will need.  
+
+\section{Initial Guidance (to do for first data debrief)}
+
+Since this is a project for which you'll have to define and obtain the data
+yourselves, the goal for the first week is for you \emph{to define what tweets
+(or other info) you want to work with, download that data, and wrangle it into
+a simpler format}. 
+
+An important goal for this project is to provide an opportunity for you to get
+more practice using Python.  In particular, for this project I expect you to
+gain more experience working with basic Python structures (lists, dictionaries,
+tuples, and strings) and work with JSON and CSV using Python.  You will also be
+using Python's string processing and text mining capabilities to process the
+data.  While you may wish to use some of the packages in the scientific Python
+stack, the focus will be on core Python language features and a few specialized
+libraries.
+
+
+\section{Presentation Details}
+
+The main deliverable will be a poster.  You 
+1. Slide deck
+
+2. Poster draft to submit
+
+3. Incorporate new data
+
+4. Possibly present at BSTARS
+
+\section{Poster Details}
+
+There are many ways to create a poster. Here are some possibilities for you to explore:
+\begin{itemize}
+\item Beamer Poster Package\\
+ \url{http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php}
+\item Powerpoint (try searching for "research poster powerpoint template")
+\item Adobe Illustrator or InDesign (available free to students at \url{https://software.berkeley.edu/adobe})
+\item Pages (recommended over Keynote for posters)
+\end{itemize}
+
+Your posters will be due {\em at the latest} on Tuesday, February 24, and we'll
+spend some time sharing them in class on Wednesday, Februrary 25. (You should
+have everything finished by Monday, so that you have time for printing.) A
+service I can recommend is
+\url{http://gif.berkeley.edu/services/printing.html}. Note that they require an
+appointment, which I recommend you go ahead and schedule now.
+
+If you use this printing service, your poster should be 36" or 42" along one
+side. (These are the paper sizes they stock.) 36" high x 48" wide is fairly
+common poster size.
+
+When designing your poster, you may find it helpful to draw the layout before
+you try to implement it in software. Another piece of advice is to be careful
+with the resolution of your figures. After designing your poster, you may need
+to regenerate them at the actual size they will occupy. Taking a small figure
+and enlarging it to fit the poster will cause the image quality to be poor.
+
+The poster should contain a title, your names, data source(s), the plots, and
+text to tie everything together. Someone should be able to understand the main
+findings simply by reading it, but be careful not to include so much text that
+the poster becomes difficult to skim. It's typical to ``present'' the poster and
+give more details verbally. 
+
+\end{document}  

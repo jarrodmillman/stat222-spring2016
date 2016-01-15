@@ -26,7 +26,7 @@ MD_EXTENSIONS = (['toc'])
 ## Title menu options (this isn't necessary, but I wanted to have more control)
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
-MENUITEMS = [#('Announcements',
+MENUITEMS = []#('Announcements',
              # 'http://www.jarrodmillman.com/stat159-fall2015/announcements.html'),
              #('Syllabus',
              # 'http://www.jarrodmillman.com/stat159-fall2015/syllabus.pdf'),
@@ -34,13 +34,13 @@ MENUITEMS = [#('Announcements',
              # 'http://www.jarrodmillman.com/stat159-fall2015/cal.pdf'),
              #('Lectures/Labs',
              # 'http://www.jarrodmillman.com/rcsds'),
-             ('Project',
-              'http://www.jarrodmillman.com/stat222-spring2016/pages/projects.html'),]
+             #('Project',
+             # 'http://www.jarrodmillman.com/stat222-spring2016/pages/projects.html'),]
 
 DISPLAY_TAGS_ON_SIDEBAR = False
 
-LINKS = (('Course GitHub site', 'https://github.com/berkeley-stat222'),
-         ('Piazza discussion site', 'https://piazza.com/berkeley/spring2016/stat222/home'),)
+LINKS = (('Course GitHub site', 'https://github.com/berkeley-stat222'),)
+         #('Piazza discussion site', 'https://piazza.com/berkeley/spring2016/stat222/home'),)
 
 DEFAULT_PAGINATION = 10
 
