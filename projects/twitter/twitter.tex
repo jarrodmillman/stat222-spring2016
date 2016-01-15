@@ -40,10 +40,21 @@
 
 For this project, your primary data source will be Twitter.  And you will be
 expected to work with the Twitter API using Python to access this data. On
-Monday (2/23), I will briefly review Python, introduce JSON (Javascript Object
+Wednesday (1/20), I will briefly review Python, introduce JSON (Javascript Object
 Notation), and demonstrate how to interact with the Twitter API using the
 \href{https://github.com/sixohsix/twitter}{Python Twitter Tools}.  However, you
-will need to do outside reading to get up to speed with these tools. 
+will need to do outside reading to get up to speed with these tools.\footnote{I
+am holding a 1-day Python bootcamp on Saturday, January 23rd.  If you don't feel
+comfortable with Python, you should attend the bootcamp.}
+
+An important goal for this project is to provide an opportunity for you to get
+more practice using Python.  In particular, for this project I expect you to
+gain more experience working with basic Python structures (lists, dictionaries,
+tuples, and strings) and work with JSON and CSV using Python.  You will also be
+using Python's string processing and text mining capabilities to process the
+data.  While you may wish to use some of the packages in the scientific Python
+stack, the focus will be on core Python language features and a few specialized
+libraries.
 
 Python Twitter Tools is one of several Python
 packages\footnote{\url{http://www.danielforsyth.me/analyzing-a-nhl-playoff-game-with-twitter}}
@@ -59,27 +70,31 @@ Web}.\footnote{\url{https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Ed
 
 \section{Your Assignment}
 
-Each group is responsible for creating a poster presentation that visually
-answers a set of questions, which you will determine for yourselves.  You will
-first need to decide on a set of question that you can use Twitter data to
-answer.  Once you determine the questions you wish to address, you will need to
-use the Python Twitter package to download the data from Twitter that you will
-use to answer the question.  You are free to use Python to analyze the data and
-create plots.  Since you've had limited practice with Python, you are welcome
-to use R for some of the analysis and for creating your figures. However, even
-if you decide to use R for some of the analysis and plotting, you must use
-Python to retrieve the data as well as most of the preprocessing.  For example,
-you may decide to use Python to create a term-document matrix (or a term
-frequency by inverse document frequency matrix) and save the data as a CSV
+Each group is responsible for creating a slide and poster presentation that
+visually answers a set of questions, which you will determine for yourselves.
+You will first need to decide on a set of question that you can use Twitter
+data to answer.  Once you determine the questions you wish to address, you will
+need to use the Python Twitter package to download the data from Twitter that
+you will use to answer the question.  You are free to use Python to analyze the
+data and create plots.  Since you've had limited practice with Python, you are
+welcome to use R for some of the analysis and for creating your figures.
+However, even if you decide to use R for some of the analysis and plotting, you
+must use Python to retrieve the data as well as most of the preprocessing.  For
+example, you may decide to use Python to create a term-document matrix (or a
+term frequency by inverse document frequency matrix) and save the data as a CSV
 file, which you can then read with R.
 
 In terms of number of plots in your poster, a {\em minimum} number to aim for
 is 10, although it might be natural for some plots to be grouped together into
-a single figure. Last year, Cari Kauffman and I created a slide presentation as
+a single figure.  You will probably want to create more plots for your slide
+presentations.  Last year, Cari Kauffman and I created a slide presentation as
 an example of the kind of questions and visual answers you might use.  You
 should look over our example, although you should not simply replicate our
-plots.  You can find our slides \href{here}{http://jarrodmillman.com} and
-a transcript of our talk \href{here}{http://jarrodmillman.com}.
+plots.  I've posted our example slides
+(\url{http://jarrodmillman.com/projects/twitter/senators/senators.pdf}) along
+with the transcript of our talk
+(\url{http://jarrodmillman.com/projects/twitter/senators/senators-talkscript.txt})
+on the course website.
 
 {\em Which} questions you answer is up to you, but think about telling a story.
 The story will be more interesting if the questions you address are related to
@@ -123,8 +138,8 @@ consider incorporating external data sources.  For example, you may want to
 relate your findings to current events (e.g., a spike in activity may be
 associated with major news events occuring just before the spike).  Or,
 perhaps, you will want to get additional data about certain Twitter users
-(e.g., pulling biographical details about a Twitter user from Wikipedia or
-their homepage) or organization (e.g., pulling 
+(e.g., biographical details about a Twitter user from Wikipedia or
+their homepage) or organization (e.g., recent press releases or news articles).
 
 \end{itemize}
 
@@ -138,39 +153,33 @@ Here is the tentative schedule:
 \toprule
 \multicolumn{1}{c|}{Monday} & \multicolumn{1}{c}{Wednesday} \\
 \hline
-(1/18) No class              & (1/20) Start Twitter project \\
+                             & (1/20) Start Twitter project \\
 (1/25) Text mining I         & (1/27) Text mining II \\
 (2/1) Graphics I             & (2/3) Graphics II \\
 (2/8) Slide presentations    & (2/10) Group work \\
-(3/15) No class              & (3/17) Group work \\                                       
-(3/22) Poster presentations  & (3/24) Start group project 2 \\                                       
+\emph{\hspace{12mm} No class} & (2/17) Group work \\                                       
+(2/22) Poster presentations  & \\                                       
 \bottomrule
 \end{tabular}
 \end{table}
 
-Over winter break you should spend some time exploring Twitter
-(\url{http://www.twitter.com}) to familiarize yourself with how it works.
-Explore the Twitter interface to discover who uses it and how. You may wish to
-beginning following a few accounts.  Pay attention to how people use
-\texttt{\#hashtags} and \texttt{\ \@mentions}.  In addition to individuals, look at
-what organizations (e.g., companies, non-profits, political campaigns) use it
-and how.  While doing this, you should also begin thinking about what kind of
-questions you may want to address.
+You should spend some time exploring Twitter (\url{http://www.twitter.com}) as
+soon as you can to familiarize yourself with how it works.  Explore the Twitter
+interface to discover who uses it and how. You may wish to begin following
+a few accounts.  Pay attention to how people use \verb|#hashtags| and
+\verb|@mentions|.  In addition to individuals, look at what organizations
+(e.g., companies, non-profits, political campaigns) use it and how.  While
+doing this, you should also begin thinking about what kind of questions you may
+want to address.
 
-I recommend that you not focus on what methods you would use at this point.
-Once the semester begins, I will discuss how to collect Twitter data as well as
-several different analysis approaches you might take.
+Since this is a project for which you'll have to define and obtain the data
+yourselves, the goal for the first week is for you \emph{to define what tweets
+(or other info) you want to work with, download that data, and wrangle it into
+a simpler format}. 
 
-I will randomly assign groups during the first day of class. Prior to the
-following Monday, your team should meet to discuss what general questions you
-want to ask.  Once you have a general idea of what questions you want to ask,
-you need to decide what data you want to collect.  You should immediately start
-collecting Twitter data with the goal of addressing your questions.  (You will
-not be permitted to use data that you collect prior to the start of the
-semester.)  In addition to the Twitter data, your group should also discuss
-what other data sources you may need to use.
-
-Next, working individually over the weekend, brainstorm {\em three} specific
+Before Monday, January 25th, each student should retrieve some data from
+Twitter using the tools I present on the 20th.  Working individually, 
+brainstorm {\em three} specific
 questions to use a starting point for exploring this data. The answers to these
 questions will almost certainly suggest other questions to you, but use these
 as a starting point.  For each question,
@@ -186,45 +195,81 @@ what you want to learn. I think you'll find you get richer and more interesting
 results in an open-ended project like this if you allocate more of your time at
 this stage to {\em thinking} and less to implementation.
 
-During the second week of the semester, I will discuss text mining in Python.
-This will include basic summary statistics (e.g., word frequency, concordance,
-collocation), the bag-of-words model, document similarity metrics, latent
-semantic indexing, sentiment analysis, and topic modeling.  
+I will randomly assign each student to a group on Monday, January 25th.  For
+the first half of the class, I will begin a brief introduction to text mining
+with Twitter data.  For the second half of the class, you will meet with your
+group.  During this initial meeting, every member of the team should present the
+data they retrieved over the weekend as well as the three specific questions
+you came up with for exploring this data.
 
-using the Natural
-Language Toolkit (nltk).\footnote{http://www.nltk.org} By this point, your
-group should have downloaded the Twitter data and whatever other data you
-think you will need.  
+Before class on Wednesday (1/27), your team should meet to discuss what general
+questions you want to ask.  Once you have a general idea of what questions you
+want to ask, you need to decide what data you want to collect.  You should
+immediately start collecting Twitter data with the goal of addressing your
+questions.  In addition to the Twitter data, your group should also discuss
+what other data sources you may need to use and figure out how you are getting
+to collect it.
 
-\section{Initial Guidance (to do for first data debrief)}
-
-Since this is a project for which you'll have to define and obtain the data
-yourselves, the goal for the first week is for you \emph{to define what tweets
-(or other info) you want to work with, download that data, and wrangle it into
-a simpler format}. 
-
-An important goal for this project is to provide an opportunity for you to get
-more practice using Python.  In particular, for this project I expect you to
-gain more experience working with basic Python structures (lists, dictionaries,
-tuples, and strings) and work with JSON and CSV using Python.  You will also be
-using Python's string processing and text mining capabilities to process the
-data.  While you may wish to use some of the packages in the scientific Python
-stack, the focus will be on core Python language features and a few specialized
-libraries.
 
 
 \section{Presentation Details}
 
-The main deliverable will be a poster.  You 
-1. Slide deck
+For this project you will be required to create both a slide and a poster
+presentation.  While you are expected to carefully prepare and practice your
+slide presentation, you should view it as a progress report.
 
-2. Poster draft to submit
+You will have feedback from your slide presentation, which you should use
+while preparing your poster.  You should also continue collecting data
+after your slide presentation.
 
-3. Incorporate new data
+Every group will submit their poster for potential presentation at the Berkeley
+Statistics Annual Research Symposium (BSTARS).  All submissions will be
+reviewed by the Department's Industry Alliance Program (IAP;
+http://statistics.berkeley.edu/industry/iap) committee for possible inclusion
+in the program.  Submissions will be considered for either a talk or poster.
 
-4. Possibly present at BSTARS
+The BSTARS event is scheduled on Monday, March 14.
 
-\section{Poster Details}
+\subsection{Slide Details}
+
+The slide presentations will be given in the \textbf{Pecha
+Kucha}\footnote{\url{http://en.wikipedia.org/wiki/PechaKucha}} style.  A Pecha
+Kucha presentation consists of 20 slides that are automatically advanced every
+20 seconds (20x20).  The complete presentation lasts exactly 6 minutes and 40
+seconds.
+
+This is a very constrained format.  So you will need to carefully plan and
+prepare your talk.  Each group will have 4 members and each member will be
+responsible for presenting 5 slides.  Since the slides will automatically
+advance, you \textbf{must} practice your talks before you present in class.
+
+After your slide presentation, you will receive feedback, which you should
+incorporate in your poster presentation on Monday (2/22).
+
+\subsection*{How to make slides}
+
+There are many ways to create slides, but make sure that you are able to
+save your slides as a PDF.  Here are some possibilities for you to explore:
+\begin{itemize}
+\item Beamer\\
+ \url{http://web.mit.edu/rsi/www/pdfs/beamer-tutorial.pdf}
+\item Pandoc\\
+ \url{http://johnmacfarlane.net/pandoc/demo/example9/producing-slide-shows-with-pandoc}
+\item Powerpoint or Keynote
+\end{itemize}
+
+\subsection*{How \textbf{NOT} to make slides}
+
+\begin{itemize}
+\item Tufte's \emph{PowerPoint Is Evil}\\
+ \url{http://archive.wired.com/wired/archive/11.09/ppt2.html}
+\item Norvig's \emph{Gettysburg Cemetery Dedication}\\
+ \url{http://norvig.com/Gettysburg/sld001.htm}
+\item Efron's \emph{Thirteen rules}\\
+ \url{http://statweb.stanford.edu/~ckirby/brad/other/2013ThirteenRules.pdf}
+\end{itemize}
+
+\subsection{Poster Details}
 
 There are many ways to create a poster. Here are some possibilities for you to explore:
 \begin{itemize}
@@ -235,10 +280,11 @@ There are many ways to create a poster. Here are some possibilities for you to e
 \item Pages (recommended over Keynote for posters)
 \end{itemize}
 
-Your posters will be due {\em at the latest} on Tuesday, February 24, and we'll
-spend some time sharing them in class on Wednesday, Februrary 25. (You should
-have everything finished by Monday, so that you have time for printing.) A
-service I can recommend is
+%Your posters will be due {\em at the latest} on Tuesday, February 24, and we'll
+%spend some time sharing them in class on Wednesday, Februrary 25. (You should
+%have everything finished by Monday, so that you have time for printing.) 
+
+A service I can recommend is
 \url{http://gif.berkeley.edu/services/printing.html}. Note that they require an
 appointment, which I recommend you go ahead and schedule now.
 
@@ -256,6 +302,6 @@ The poster should contain a title, your names, data source(s), the plots, and
 text to tie everything together. Someone should be able to understand the main
 findings simply by reading it, but be careful not to include so much text that
 the poster becomes difficult to skim. It's typical to ``present'' the poster and
-give more details verbally. 
+give more details verbally.
 
-\end{document}  
+\end{document}
