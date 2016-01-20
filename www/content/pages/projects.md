@@ -1,7 +1,11 @@
 Title: UC Berkeley's Statistics 222 (Spring 2016)
 Slug: projects
 
+## Projects
+
 * [Twitter](http://www.jarrodmillman.com/stat222-spring2016/projects/twitter/twitter.pdf)
+
+## Group project guidelines
 
 Large open ended questions in the sciences, government, and business require
 collaboration between multiple parties with a wide range of expertise. The
