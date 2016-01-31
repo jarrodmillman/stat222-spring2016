@@ -1,7 +1,11 @@
-FILE=redwood.tex
+TITLE=redwood
 
 all:
-	pdflatex ${FILE}
+	pdflatex $(TITLE).tex
+	bibtex $(TITLE)
+	pdflatex $(TITLE).tex
+	pdflatex $(TITLE).tex
+
 
 clean:
 	rm *.{aux,log,out}
