@@ -20,4 +20,4 @@ communication skills you'll need to be a successful practicing statistician.
     * [Chun Yu Hong (Johnny)](http://jcyhong.github.io)
     * OH: W 2-6P in 444 EVANS
 * Session Dates: 01/19-5/13/16
-    * Class meets MW 900-11A in 330 EVANS
+    * Class meets MW 900-11A in 340 EVANS
