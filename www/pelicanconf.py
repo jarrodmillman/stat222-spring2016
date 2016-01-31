@@ -40,8 +40,8 @@ MENUITEMS = [#('Announcements',
 
 DISPLAY_TAGS_ON_SIDEBAR = False
 
-LINKS = (('Course GitHub site', 'https://github.com/berkeley-stat222'),)
-         #('Piazza discussion site', 'https://piazza.com/berkeley/spring2016/stat222/home'),)
+LINKS = (('Course GitHub site', 'https://github.com/berkeley-stat222'),
+         ('Piazza discussion site', 'https://piazza.com/berkeley/spring2016/stat222/home'),)
 
 DEFAULT_PAGINATION = 10
 
