@@ -19,5 +19,3 @@ sonoma-data-all.csv.gz
 
 Gilman Tolle
 <get@cs.berkeley.edu>
-
-
