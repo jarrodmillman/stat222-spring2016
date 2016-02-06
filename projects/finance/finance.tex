@@ -1,0 +1,92 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{upquote}
+
+%-----------------------------------------------------------------------------
+% Special-purpose color definitions (dark enough to print OK in black and white)
+\usepackage{color}
+% A few colors to replace the defaults for certain link types
+\definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+\definecolor{darkorange}{rgb}{.71,0.21,0.01}
+\definecolor{darkgreen}{rgb}{.12,.54,.11}
+%-----------------------------------------------------------------------------
+% The hyperref package gives us a pdf with properly built
+% internal navigation ('pdf bookmarks' for the table of contents,
+% internal cross-reference links, web links for URLs, etc.)
+\usepackage{hyperref}
+\hypersetup{pdftex, % needed for pdflatex
+  breaklinks=true, % so long urls are correctly broken across lines
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=darkorange,
+  citecolor=darkgreen,
+}
+
+\usepackage{booktabs}
+
+
+\title{Stat 222: Finance Project}
+\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Data Description}
+
+For this project, your primary data source will be from 
+\cite{kercheval2015modelling}.
+You may also find this blog
+post \footnote{\url{http://eugenezhulenev.com/blog/2014/11/14/stock-price-prediction-with-big-data-and-machine-learning/}}
+helpful.
+(more details...)
+
+A central goal for this project is to give you exposure to machine learning
+in the context of financial data.
+(more details...)
+Finally, the project will provide you
+with the opportunity to practice reading and writing about applied statistical
+data analysis.
+
+
+\section{Your Assignment}
+
+This is a team project.
+
+You are required to do everything in Python.
+
+(add details here...)
+
+\subsection*{Timeline and logistics}
+
+Here is the tentative schedule:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\multicolumn{1}{c|}{Monday} & \multicolumn{1}{c}{Wednesday} \\
+\hline
+                               & (2/24) Financial data \\
+(2/29) Start Finance Project   & (3/2) Machine learning \\
+(3/7)                          & (3/9) Git \\
+(3/14)                         & (3/16) \\
+\emph{\hspace{12mm} Spring break}  & \emph{\hspace{12mm} Spring break}\\
+(3/28) Finance report          & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Report Details}
+
+
+\bibliographystyle{plain}
+\bibliography{finance}
+
+\end{document}  

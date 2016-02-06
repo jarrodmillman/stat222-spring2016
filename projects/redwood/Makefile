@@ -1,4 +1,4 @@
-TITLE=redwood
+TITLE=sensor
 
 all:
 	pdflatex $(TITLE).tex
@@ -8,4 +8,4 @@ all:
 
 
 clean:
-	rm *.{aux,log,out}
+	rm *.{aux,log,out,blg,bbl}
