@@ -69,13 +69,13 @@ For this project, you will obtain two datasets:
 \begin{enumerate}
 \item LOB data: AAPL 05222012 0930 1300 LOB 2.csv
 
-This dataset contains the prices and volumes of AAPL from 09:30 to 12:28 on 2012/05/22 for 10 levels of bid and ask for each time-stamped event.
+This dataset contains the prices and volumes of AAPL from 9:30 to 12:28 on 2012/05/22 for 10 levels of bid and ask for each time-stamped event.
 
 \item message book data: AAPL 05222012 0930 1300 message.csv
 
-This dataset contains information about each order from 09:30 to 13:00 on 2012/05/22.
+This dataset contains information about each order from 9:30 to 13:00 on 2012/05/22.
 
-Since the data size is relatively huge, the training of the machine learning algorithms can take a very lone time. You can restrict your analysis to a 1-hour subset of the data.
+If you are feeling ambitious, feel free to use the message book data, but you are not required to. In this project, we will be using only the data from 9:30 to 12:00.
 
 \end{enumerate}
 
@@ -86,15 +86,24 @@ This is a team project. You should split up the tasks among your group members. 
 \begin{enumerate}
 \item Data preprocessing
 
-Your first task is to transform the two datasets into a data frame convenient for 
+Your first task is to transform the dataset(s) into a data frame convenient for 
 further analysis. You may want to look at Table 2 in Kercheval and Zhang's paper 
 to get an idea what features might be useful for the prediction. You do not have 
-to use all the features suggested in the paper. You should split your new dataset 
-into three parts: training set (50\%), validation set (25\%), and test set (25\%). 
-You are required to study both midprice movements and bid-ask spread crossings.
+to use all the features suggested in the paper. You are required to study both 
+midprice movements and bid-ask spread crossings. For simplicity, time is measured 
+in terms of the number of time-stamped trade events. You need to decide a suitable 
+time horizon: if the time horizon is too small, the majority of the price movements will be 
+stationary; if the time horizaon is too big, the prediction becomes harder.
+
+After the preprocessing, split the dataset into two parts: 9:30 to 11:00 and 11:00
+to 12:00. For the rest of the project, except for the trading strategies implementation 
+portion, use only the 9:30 to 11:00 data.
+
 
 \item Model Fitting
 
+At this point, you should split your dataset into three parts: training set (50\%), 
+validation set (25\%), and test set (25\%). 
 Your second task is to fit the various machine learning models to the training set. 
 The minimum requirement is to fit support vector machines (SVM) with the radial 
 basis function (RBF) kernels and random forests, but you are strongly encouraged 
@@ -107,11 +116,35 @@ choose the parameters that minimizes certain error criterion.
 Your third task is to test your models with the test set. What are the performances 
 of each of your models? Be sure not to simply use the percentage accuracy as your sole
 performance measure. Use at least recall, precision, and $F_1$-measure to assess model 
-performance\footnote{Refer to Kercheval and Zhang's paper and/or see Wikipedia for a description of these performance measures: https://en.wikipedia.org/wiki/Precision\_and\_recall}.
+performance\footnote{Refer to Kercheval and Zhang's paper and/or see Wikipedia for a 
+description of these performance measures: https://en.wikipedia.org/wiki/Precision\_and\_recall}.
 
 \item Interpretations
 
-One problem with more sophisticated machine learning algorithms is that interpretability is sacrificed in exchange for higher prediction accuracy. So far in this project, we have considered only machine learning algorithms with a strong black-box flavor. Your final task is to try coming up simple summary statistics of the LOB that are useful for predicting the price movements. These summary statistics can be taken from the feature sets in Kercheval and Zhang's paper, or new statistics you come up with. For example, consider the ratio of the total volume of top five ask-side orders and the total volume of top five bid-side orders. If this ratio is very big or very small, there is a strong indication of the imbalance of supply and demand, which might cause price movements. This final task is intended more open-ended and requires more intuition. After coming up with a couple summary statistics, try fitting a logistic regression and compare your results with those obtained from the machine learning approaches you tried earlier in this project. Can you interpret your new model?
+One problem with more sophisticated machine learning algorithms is that interpretability 
+is sacrificed in exchange for higher prediction accuracy. So far in this project, we have 
+considered only machine learning algorithms with a strong black-box flavor. Your final 
+task is to try coming up simple summary statistics of the LOB that are useful for 
+predicting the price movements. These summary statistics can be taken from the 
+feature sets in Kercheval and Zhang's paper, or new statistics you come up with. For 
+example, consider the ratio of the total volume of top five ask-side orders and the 
+total volume of top five bid-side orders. If this ratio is very big or very small, there is a 
+strong indication of the imbalance of supply and demand, which might cause price 
+movements. This final task is intended more open-ended and requires more intuition. 
+After coming up with a couple summary statistics, try fitting a logistic regression and 
+compare your results with those obtained from the machine learning approaches you 
+tried earlier in this project. Can you interpret your new model?
+
+\item Trading strategies implementation
+Come up with simple trading strategies based on your machine learning models. 
+Implement the strategies on the 11:00-12:00 data and compute the total profit. 
+To simplify the problem, make the following assumptions:
+\begin{enumerate}
+\item There is no transaction cost.
+\item You can place only market orders, and assume that they can be executed immediately at the best bid/ask.
+\item Your position can only be long/short at most one share.
+\end{enumerate}
+Since none of the assumptions are realistic, in your report, explain how you would modify your trading strategies if the assumptions are violated. 
 
 \end{enumerate}
 
@@ -138,7 +171,7 @@ Here is the tentative schedule:
 
 
 \section{Report Details}
-Your report should include at least six sections: an introduction, four body sections (each of which covers an aspect discussed in the ``Your assignment" section), and a conclusion. Make sure to compare the predictions and model performances for midprice movements and bid-ask spread crossings.
+Your report should include at least six sections: an introduction, five body sections (each of which covers an aspect discussed in the ``Your assignment" section), and a conclusion. Make sure to compare the predictions and model performances for midprice movements and bid-ask spread crossings. The report has a 9-page limit.
 
 \bibliographystyle{plain}
 \bibliography{finance}
