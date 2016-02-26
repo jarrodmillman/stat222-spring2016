@@ -1,0 +1,10 @@
+\begin{thebibliography}{1}
+
+\bibitem{kercheval2015modelling}
+Alec~N Kercheval and Yuan Zhang.
+\newblock Modelling high-frequency limit order book dynamics with support
+  vector machines.
+\newblock {\em Quantitative Finance}, 15(8):1315--1329, 2015.
+\newblock \url{http://www.math.fsu.edu/~kercheva/papers/multi-svm.pdf}.
+
+\end{thebibliography}

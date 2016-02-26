@@ -7,5 +7,14 @@ Gilman Tolle, Joseph Polastre, Robert Szewczyk, David Culler, Neil Turner,
 \newblock {A Macroscope in the Redwoods}.
 \newblock In {\em Proceedings of the 3rd International Conference on Embedded
   Networked Sensor Systems}, pages 51--63. ACM, 2005.
+\newblock \url{http://delivery.acm.org/10.1145/1100000/1098925/p51-tolle.pdf}.
+
+\bibitem{yang2003redwoods}
+Sarah Yang.
+\newblock Redwoods go high tech: Researchers use wireless sensors to study
+  california's state tree.
+\newblock {\em University of California at Berkeley News (UCNEWS)}, 2003.
+\newblock
+  \url{http://www.berkeley.edu/news/media/releases/2003/07/28_redwood.shtml}.
 
 \end{thebibliography}
