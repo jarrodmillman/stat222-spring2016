@@ -4,6 +4,7 @@ Slug: projects
 ## Projects
 
 * [Twitter](http://www.jarrodmillman.com/stat222-spring2016/projects/twitter/twitter.pdf)
+* [Finance](http://www.jarrodmillman.com/stat222-spring2016/projects/finance/finance.pdf)
 
 ## Group project guidelines
 
