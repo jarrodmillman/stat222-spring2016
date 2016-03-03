@@ -1,0 +1,137 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{upquote}
+
+%-----------------------------------------------------------------------------
+% Special-purpose color definitions (dark enough to print OK in black and white)
+\usepackage{color}
+% A few colors to replace the defaults for certain link types
+\definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+\definecolor{darkorange}{rgb}{.71,0.21,0.01}
+\definecolor{darkgreen}{rgb}{.12,.54,.11}
+%-----------------------------------------------------------------------------
+% The hyperref package gives us a pdf with properly built
+% internal navigation ('pdf bookmarks' for the table of contents,
+% internal cross-reference links, web links for URLs, etc.)
+\usepackage{hyperref}
+\hypersetup{pdftex, % needed for pdflatex
+  breaklinks=true, % so long urls are correctly broken across lines
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=darkorange,
+  citecolor=darkgreen,
+}
+
+\usepackage{booktabs}
+
+
+\title{Stat 222: Mouse Behavior Project}
+\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Data Description}
+
+For this project, your primary data source will be mouse behavioral data from
+the Tecott Lab at
+UCSF.\footnote{http://www.neuroscience.ucsf.edu/neurograd/faculty/tecott.html}
+The lab has recently developed a method for continuous high-resolution
+behavioral data collection and analysis, which enables them to observe and
+study the structure of spontaneous patterns of behavior (``Lifestyles'') in the
+mouse.  They have found that using this method: 1) reveals a set of fundamental
+principles of behavioral organization that have not been previously reported,
+2) permits classification by genotype with unprecedented accuracy, and 3)
+enables fine dissection of behavioral patterns.
+
+A central goal for this project is to give you hands-on experience working
+with ...
+
+\section{Your Assignment}
+
+Working as a fictitious consulting company, Capstone Analytics, we will produce
+a high quality Python package to analyze some of the new data generated in the
+Tecott lab.
+
+I (Jarrod) will act as the head of Capstone Analytics and you will all act as
+employees. 
+
+\subsection*{Timeline and logistics}
+
+Here is the tentative schedule:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}l|l@{}}
+\toprule
+\multicolumn{1}{c|}{Monday} & \multicolumn{1}{c}{Wednesday} \\
+\hline
+(3/7) Project introduction     & (3/9) Git workflow I \\
+(3/14) Follow-up discussion    & (3/16) Git workflow II \\
+\emph{\hspace{12mm} Spring break}  & \emph{\hspace{12mm} Spring break}\\
+(3/28) Start final project     & (3/30) TBD\\
+(4/4) Project check in         & (4/6) TBD\\
+(4/11) Project check in        & (4/13) TBD\\
+(4/18) Project check in        & (4/20) TBD\\
+(4/25) Project check in        & (4/27) TBD\\
+(5/2) Project check in         & (5/4) TBD\\
+\emph{\hspace{12mm} RRR week}  & \emph{\hspace{12mm} RRR week}\\
+\emph{\hspace{12mm} Final week}  & \emph{\hspace{12mm} Final week}\\
+%(5/9) RRR week                 & (5/11) RRR week\\
+%(5/16) Final week              & (5/18) Final week\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On Monday, March 7th during class, Professor Larry Tecott and Dr. Chris Hillar
+will provide a general introduction to the project from the perspective of a
+behavioral neuroscientist (Professor Tecott) as well as from the perspective of
+a computational data scientist (Dr. Hillar).  Part of the class time will be
+spent in an open discussion with the students.  Professor Tecott will also lead
+a follow-up discussion on Monday, March 14th during class.
+
+\section{Project Deliverables}
+
+There will be two main project deliverables: a Python package and a
+final self-evaluation.  The entire class will be responsible for
+the Python package and their will be one grade for the final project.
+Each student will be required to submit a final self-evaluation
+and to schedule a 30 minute meeting with me during finals to discuss
+your evaluations.
+
+\subsection{Python package}
+
+I will be responsible for creating the initial project infrastructure
+on GitHub.  If there are code or infrastructure issues that the
+class can't agree on, I will be responsible for making the final
+decision.  However, before I intervene, you will need to carefully
+think through the issue and prepare arguments for and against
+any decision you wish me to make.
+
+While you will be responsible for the majority of design decisions,
+I will require that the Python package have:
+
+\begin{itemize}
+\item an automated test suite with a reasonably high test coverage,
+\item a comprehensive code review process for all contributed code (using
+   GitHub's pull request mechanism and continuous integration using
+   TravisCI and Coveralls), and
+\item extensive, high quality documentation using Sphinx.
+\end{itemize}
+
+I will maintain the official project repository and will be the primary
+gatekeeper (i.e., I will be the one primarily responsible for merging all pull
+requests).  However, I will require that pull requests undergo a high level of
+review and scrutiny before I will consider merging it.  As a class, we will
+develop a code review process, which will include (among other things) program
+correctness, test coverage, code readability, and style consistency.
+
+\subsection{Self performance evaluation}
+
+\end{document}
