@@ -1,12 +1,8 @@
 Statistics 222 grading rubric
 =============================
 
-For the first project you will need to submit a print out of your written
-report in class on Monday, February 9th.
-
-While preparing your report, please refer to Cari's lecture from Monday,
-February 2nd regarding the format and content of your report. The additional
-reading may also prove useful.
+For the sensor project you will need to submit a print out of your written
+report in class on Wednesday, March 9th, in addition to the submission on github.
 
 You should include figures and text in the body of your report.  Your text
 should be organized into appropriate sections.  Your figures must be labeled,
@@ -25,26 +21,26 @@ Below is the grading rubric I will be using to assess your submissions. To
 receive the equivalent of an "A" on this assignment you will need to have
 roughly two check marks and two check pluses.
 
-+----------+------------------------------+------------------------------+-----------------------------------+
-|          |              ✓-              |               ✓              |                 ✓+                |
-+----------+------------------------------+------------------------------+-----------------------------------+
-| Analysis | Choice of analysis is        | Analysis appropriate and     | Analysis appropriate,             |
-|          | overly simplistic or         | substantial                  | complete, advanced,               |
-|          | incomplete                   |                              | and informative                   |
-+----------+------------------------------+------------------------------+-----------------------------------+
-| Results  | Conclusions are missing,     | Conclusions relevant, but    | Relevant conclusions              |
-|          | incorrect, or not based on   | partially correct, or        | explicitly tied to analysis       |
-|          | analysis                     | partially complete           | and to context                    |
-|          |                              |                              |                                   |
-|          | Inappropriate choice of      | Plots convey information     | Plots convey information          |
-|          | plots; poorly labeled plots; | correctly but lack           | correctly with adequate           |
-|          | plots missing                | context for interpretation   | and appropriate reference         |
-|          |                              |                              | information                       |
-+----------+------------------------------+------------------------------+-----------------------------------+
-| Writing  | Explanation is illogical,    | Explanation is partially     | Explanation is correct, complete, |
-|          | incorrect, or incoherent     | correct but incomplete or    | and convincing                    |
-|          |                              | unconvincing                 |                                   |
-+----------+------------------------------+------------------------------+-----------------------------------+
-| Code     | Incorrect or missing from    | Code is correct and included | Code is correct, clean,           |
-|          | appendix                     | in the appendix              | efficient, and readable           |
-+----------+------------------------------+------------------------------+-----------------------------------+
++-------------+------------------------------+------------------------------+-----------------------------------+
+|             |              ✓-              |               ✓              |                 ✓+                |
++-------------+------------------------------+------------------------------+-----------------------------------+
+| Data        | Remove only the NA values,   | Sufficient cleaning of the   | Very detailed cleaning, showing   |
+|             | or no explanation of the     | data, including some         | a clear  understanding about the  |
+| Cleaning    | data cleaning approaches     | exploratory data anaylsis    | nature of the data                |
++-------------+------------------------------+------------------------------+-----------------------------------+
+| Findings    | Conclusions are missing,     | Conclusions relevant, but    | Relevant conclusions              |
+|             | incorrect, or not based on   | partially correct, or        | explicitly tied to analysis       |
+|             | analysis                     | partially complete           | and to context                    |
+|             |                              |                              |                                   |
+|             | Inappropriate choice of      | Plots convey information     | Plots convey information          |
+|             | plots; poorly labeled plots; | correctly but lack           | correctly with adequate           |
+|             | plots missing                | context for interpretation   | and appropriate reference         |
+|             |                              |                              | information                       |
++-------------+------------------------------+------------------------------+-----------------------------------+
+| Graphical   | Inappropriate critiques,     | Explanations are appropriate | Critiques are insightful and      |
+| Critique    | very superficial comments    |                              | detailed                          |
++-------------+------------------------------+------------------------------+-----------------------------------+
+| Writing     | Explanation is illogical,    | Explanation is partially     | Explanation is correct, complete, |
+|             | incorrect, or incoherent     | correct but incomplete or    | and convincing                    |
+|             |                              | unconvincing                 |                                   |
++-------------+------------------------------+------------------------------+-----------------------------------+
